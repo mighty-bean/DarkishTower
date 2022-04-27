@@ -14,3 +14,5 @@ Hardware used:
 * Amp & Speaker: https://www.adafruit.com/product/3885
 
 ![PreviewImage](https://github.com/mighty-bean/DarkishTower/blob/main/dark_tower_preview.jpg)
+
+![WiringDiagram](DT_Wiring.png)
