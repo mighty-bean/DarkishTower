@@ -443,6 +443,7 @@ struct PlayerInventory : public GameScreen {
        
         gGameState.soundManager.play(rotate_snd, true);
         mScreenList.clear();
+        player.mTurnCompleted = true;
 
         for (int slot=0; slot < player.mInventory.size(); ++slot)
         {
@@ -2042,7 +2043,7 @@ struct PlayerTurn : public GameScreen {
 		if (!mPegasusLanding) {
 			if (player.mTurnCompleted) 
 			{
-				gGameState.displayManager.addInfo("Anything else?", ST77XX_WHITE);
+				gGameState.displayManager.addInfo("End Your Turn", ST77XX_WHITE);
 			}
 			else 
 			{
@@ -2104,8 +2105,11 @@ struct PlayerTurn : public GameScreen {
 		gGameState.displayManager.setSelection(0);
 
 		if (!mPegasusLanding) {
+            if (!player.mTurnCompleted)
+            {
         	gGameState.displayManager.addOption("Inventory", (int)Action::ViewInventory);
-			
+            }
+
 			if (player.mTurnCompleted)
 			{
         		gGameState.displayManager.addOption("End Turn", (int)Action::EndTurn);
