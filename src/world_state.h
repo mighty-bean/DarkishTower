@@ -191,7 +191,7 @@ struct WorldState {
 
 			// chose the random key order for this player
 			newPlayer.mFirstKey = (uint8_t)random((int)KeyOrder::COUNT);
-			int secondIndex= ((int)newPlayer.mFirstKey + (random(2)==0 ? -1 : 1));
+            int secondIndex= ((int)newPlayer.mFirstKey + (random(2)==0 ? -1 : 1)); 
 			if (secondIndex < 0) 
 			{
 				secondIndex += (int)KeyOrder::COUNT;
@@ -207,16 +207,16 @@ struct WorldState {
 
         // adjust for single player
         if (count == 1) {
-            mPlayers[0].mKingdomCount = 4;
+            mPlayers[0].mKingdomCount = 0;
             mPlayers[0].mIsSolo = true;
 
-/*			// TESTING
+/* 			// TESTING
 			//newPlayer.mInventory[(uint8_t)Inventory::Warriors] = 10;
 			mPlayers[0].mInventory[(uint8_t)Inventory::Pegasus] = 1;
 			mPlayers[0].mInventory[(uint8_t)Inventory::BrassKey] = 1;
 			mPlayers[0].mInventory[(uint8_t)Inventory::SilverKey] = 1;
-			mPlayers[0].mInventory[(uint8_t)Inventory::GoldKey] = 1;
-*/
+			mPlayers[0].mInventory[(uint8_t)Inventory::GoldKey] = 1; */
+
         }
     }
 };
