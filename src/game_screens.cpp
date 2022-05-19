@@ -1771,7 +1771,7 @@ struct SecondKey : public GameScreen {
 			screen.addOption("Silver", 1);
 		}
 		if (player.mFirstKey != 2) {
-			screen.addOption("Gold", 20);
+			screen.addOption("Gold", 2);
 		}
 
 		gGameState.displayManager.setDesiredLayout(screen);     

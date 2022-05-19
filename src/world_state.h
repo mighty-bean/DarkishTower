@@ -207,7 +207,7 @@ struct WorldState {
 
         // adjust for single player
         if (count == 1) {
-            mPlayers[0].mKingdomCount = 4;
+            mPlayers[0].mKingdomCount = 0;
             mPlayers[0].mIsSolo = true;
 
 /*			// TESTING
