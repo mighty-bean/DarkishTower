@@ -16,3 +16,14 @@ Hardware used:
 ![PreviewImage](https://github.com/mighty-bean/DarkishTower/blob/main/dark_tower_preview.jpg)
 
 ![WiringDiagram](DT_Wiring.png)
+
+![Compiler Setup]
+Tested using the Arduino IDE v1.8.19
+See https://feathers2.io/ for setup details
+
+Board: 
+'UM Feather S2' found in the esp32 board library
+
+Libraries needed:
+Adafruit_ST7789
+Adafruit_GFX
