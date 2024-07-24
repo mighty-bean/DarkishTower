@@ -1314,7 +1314,7 @@ struct BattleScreen : public GameScreen {
         uint16_t warColor = ST77XX_YELLOW;
 
         if (random(100) < odds ) {
-            gGameState.soundManager.play(pegasus_snd, true);
+            gGameState.soundManager.play(enemy_hit_snd, true);
             title = "ROUND WON!";
             if (mBrigands > 1) {
                 mBrigands = mBrigands>>1;
