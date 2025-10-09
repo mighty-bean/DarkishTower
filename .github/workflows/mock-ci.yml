@@ -1,0 +1,27 @@
+name: Mock CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  build-and-run-mocks:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Install build deps
+      run: sudo apt-get update && sudo apt-get install -y g++ make
+
+    - name: Compile lightweight mock
+      run: g++ -std=c++17 mock/mock_main.cpp -o mock/darkish_mock -lpthread
+
+    - name: Run lightweight mock
+      run: ./mock/darkish_mock
+
+    - name: Compile closer-to-source mock
+      run: g++ -std=c++17 mock/mock_main_full.cpp -Imock -o mock/darkish_mock_full -lpthread
+
+    - name: Run closer-to-source mock
+      run: ./mock/darkish_mock_full
